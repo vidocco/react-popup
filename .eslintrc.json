@@ -19,9 +19,11 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jsx-a11y"
     ],
     "rules": {
+        "jsx-a11y/href-no-hash": "off",
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/no-multi-comp": "error",
