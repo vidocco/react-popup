@@ -5,7 +5,7 @@ import './react-popup.scss';
 export default class ReactPopUp extends React.Component {
 
   state = {
-    popped: false
+    popped: false,
   }
 
   pop = () => {
@@ -30,7 +30,7 @@ export default class ReactPopUp extends React.Component {
           : 'rgba(0,0,0,0.4)' }`,
         position: 'absolute',
         zIndex: 1,
-        ...this.props.overlay
+        ...this.props.overlay,
       },
       popup: {
         width: `${ this.props.popup
@@ -47,27 +47,27 @@ export default class ReactPopUp extends React.Component {
           : '0 0 10px 0 rgba(0, 0, 0, 0.5)' }`,
         position: 'absolute',
         zIndex: 2,
-        ...this.props.popup
+        ...this.props.popup,
       },
       button: {
-        ...this.props.button
-      }
+        ...this.props.button,
+      },
     };
     return (
       <div className="react-popup" style={{ zIndex: -1 }}>
         {this.state.popped
           ? (
-          <div className="popup-display">
-            <div
-              style={styles.overlay}
-              onClick={this.pop}
-              className="popup-overlay"
-            >
+            <div className="popup-display">
+              <div
+                style={styles.overlay}
+                onClick={this.pop}
+                className="popup-overlay"
+              >
+              </div>
+              <div className="popup" style={styles.popup}>
+                {this.props.children}
+              </div>
             </div>
-            <div className="popup" style={styles.popup}>
-              {this.props.children}
-            </div>
-          </div>
           ) : (
             null
           )}
