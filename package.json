@@ -2,7 +2,7 @@
   "name": "react-base-popup",
   "version": "1.0.0",
   "description": "a self-contained, simple and powerful popup component for react",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "N/A"
   },
