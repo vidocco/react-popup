@@ -1,25 +1,37 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
-const webpack = require('webpack'); //to access built-in plugins
-const path = require('path');
+var path = require('path');
 
-const config = {
-  entry: './path/to/my/entry/file.js',
+module.exports = {
+  entry: path.join(__dirname, 'src/react-popup.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'my-first-webpack.bundle.js',
+    filename: 'index.js',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
       {
-        test: /\.txt$/,
-        use: 'raw-loader',
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components|build)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env','es2015', 'stage-0', 'react'],
+          },
+        },
+      },
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components|build)/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
       },
     ],
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-    new HtmlWebpackPlugin({template: './src/index.html'}),
-  ],
+  externals: {
+    'react': 'commonjs react',
+  },
 };
-
-module.exports = config;

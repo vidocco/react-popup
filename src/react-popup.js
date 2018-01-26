@@ -1,11 +1,14 @@
 import React from 'react';
 
-import './react-popup.scss';
+import './react-popup.css';
 
 export default class ReactPopUp extends React.Component {
 
-  state = {
-    popped: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      popped: false,
+    }
   }
 
   pop = () => {

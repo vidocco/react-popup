@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPopup from '../lib/react-popup.jsx';
+import ReactPopup from '../lib/react-popup.js';
 
 describe('ReactPopup', function() {
   let component;

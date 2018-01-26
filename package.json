@@ -1,8 +1,8 @@
 {
-  "name": "react-popup",
+  "name": "react-base-popup",
   "version": "1.0.0",
   "description": "a self-contained, simple and powerful popup component for react",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "N/A"
   },
@@ -10,12 +10,17 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.0.3",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.13.1",
     "eslint-config-react-app": "^2.0.1",
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
   }
 }
