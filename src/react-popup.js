@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './react-popup.css';
 
@@ -13,9 +14,8 @@ export default class ReactPopUp extends React.Component {
 
   pop = () => {
     this.setState({popped: !this.state.popped}, () => {
-      if (this.state.popped && this.props.onPop && typeof this.props.onPop === 'function') { this.props.onPop(); }
-      else if (!this.state.popped && this.props.onUnpop && typeof this.props.onUnpop === 'function') { this.props.onUnpop(); }
-      if ((this.props.onPop && typeof this.props.onPop !== 'function') || (this.props.onUnpop && typeof this.props.onUnpop !== 'function')) { console.error('only functions must be used as values for event methods'); }
+      if (this.state.popped && this.props.onPop) this.props.onPop();
+      else if (!this.state.popped && this.props.onUnpop) this.props.onUnpop();
     });
   }
 
@@ -78,4 +78,13 @@ export default class ReactPopUp extends React.Component {
       </div>
     );
   }
+}
+
+ReactPopUp.propTypes = {
+  onPop: PropTypes.func,
+  onUnpop: PropTypes.func,
+  overlay: PropTypes.object,
+  popup: PropTypes.object,
+  button: PropTypes.object,
+  children: PropTypes.node,
 }

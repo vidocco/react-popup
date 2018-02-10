@@ -2,25 +2,54 @@
   "name": "react-base-popup",
   "version": "1.0.0",
   "description": "a self-contained, simple and powerful popup component for react",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "N/A"
+    "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidocco/react-popup.git"
+  },
+  "keywords": [
+    "react",
+    "react.js",
+    "popup",
+    "modal",
+    "react",
+    "component"
+  ],
+  "bugs": {
+    "url": "https://github.com/vidocco/react-popup/issues"
+  },
+  "homepage": "https://github.com/vidocco/react-popup#readme",
   "author": "Jack Thibaut",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.3.0",
     "eslint": "^4.13.1",
     "eslint-config-react-app": "^2.0.1",
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
-    "webpack": "^3.10.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "jest": "^22.1.4",
+    "react": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
   }
 }
