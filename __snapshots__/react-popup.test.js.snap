@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React Popup should appear and dissappear 1`] = `
+<div
+  className="react-popup"
+  style={
+    Object {
+      "zIndex": -1,
+    }
+  }
+>
+  <input
+    onClick={[Function]}
+    style={
+      Object {
+        "zIndex": -1,
+      }
+    }
+    type="button"
+    value="show"
+  />
+</div>
+`;
+
+exports[`React Popup should render 1`] = `
+<div
+  className="react-popup"
+  style={
+    Object {
+      "zIndex": -1,
+    }
+  }
+>
+  <input
+    onClick={[Function]}
+    style={
+      Object {
+        "zIndex": -1,
+      }
+    }
+    type="button"
+    value="show"
+  />
+</div>
+`;
