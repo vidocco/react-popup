@@ -80,6 +80,11 @@ export default class ReactPopUp extends React.Component {
   }
 }
 
+/**
+ * npm run build:dist will build a uglified version of ReactPopUp using webpack --optimize-minimize
+ * There is an option to put exceptions on the uglify so that it won't mangle a specific variable
+ */
+
 ReactPopUp.propTypes = {
   onPop: PropTypes.func,
   onUnpop: PropTypes.func,
@@ -87,4 +92,5 @@ ReactPopUp.propTypes = {
   popup: PropTypes.object,
   button: PropTypes.object,
   children: PropTypes.node,
+  buttonText: PropTypes.string,
 }
