@@ -1,4 +1,5 @@
 var path = require('path');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src/react-popup.js'),
@@ -31,6 +32,21 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new UglifyJsPlugin({
+      test: /\.js($|\?)/i,
+      sourceMap: true,
+      uglifyOptions: {
+        mangle: {
+          reserved: [
+            'ReactPopUp',
+            'props',
+          ],
+        },
+        keep_classnames: true,
+      },
+    }),
+  ],
   externals: {
     'react': 'commonjs react',
   },
