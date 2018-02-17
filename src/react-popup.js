@@ -22,32 +22,18 @@ export default class ReactPopUp extends React.Component {
   render() {
     const styles = {
       overlay: {
-        width: `${ this.props.overlay
-          ? this.props.overlay.width || '100%'
-          : '100%'}`,
-        height: `${ this.props.overlay
-          ? this.props.overlay.height || '100%'
-          : '100%' }`,
-        backgroundColor: `${ this.props.overlay
-          ? this.props.overlay.backgroundColor || 'rgba(0,0,0,0.4)'
-          : 'rgba(0,0,0,0.4)' }`,
+        width: `${ (this.props.overlay && this.props.overlay.width) || '100%'}`,
+        height: `${ (this.props.overlay && this.props.overlay.height) || '100%' }`,
+        backgroundColor: `${ (this.props.overlay && this.props.overlay.backgroundColor) || 'rgba(0,0,0,0.4)' }`,
         position: 'absolute',
         zIndex: 1,
         ...this.props.overlay,
       },
       popup: {
-        width: `${ this.props.popup
-          ? this.props.popup.width || '450px'
-          : '450px'}`,
-        height: `${ this.props.popup
-          ? this.props.popup.height || '650px'
-          : '650px' }`,
-        backgroundColor: `${ this.props.popup
-          ? this.props.popup.backgroundColor || 'white'
-          : 'white' }`,
-        boxShadow: `${ this.props.popup
-          ? this.props.popup.boxShadow || '0 0 10px 0 rgba(0, 0, 0, 0.5)'
-          : '0 0 10px 0 rgba(0, 0, 0, 0.5)' }`,
+        width: `${ (this.props.popup && this.props.popup.width) || '450px'}`,
+        height: `${ (this.props.popup && this.props.popup.height) || '650px' }`,
+        backgroundColor: `${ (this.props.popup && this.props.popup.backgroundColor) || 'white' }`,
+        boxShadow: `${ (this.props.popup && this.props.popup.boxShadow) || '0 0 10px 0 rgba(0, 0, 0, 0.5)' }`,
         position: 'absolute',
         zIndex: 2,
         ...this.props.popup,
@@ -79,11 +65,6 @@ export default class ReactPopUp extends React.Component {
     );
   }
 }
-
-/**
- * npm run build:dist will build a uglified version of ReactPopUp using webpack --optimize-minimize
- * There is an option to put exceptions on the uglify so that it won't mangle a specific variable
- */
 
 ReactPopUp.propTypes = {
   onPop: PropTypes.func,
