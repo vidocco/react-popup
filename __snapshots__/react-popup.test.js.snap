@@ -1,45 +1,671 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`React Popup should appear and dissappear 1`] = `
-<div
-  className="react-popup"
-  style={
-    Object {
-      "zIndex": -1,
-    }
-  }
->
-  <input
-    onClick={[Function]}
-    style={
-      Object {
+exports[`React Popup should appear in DOM as <input type="button"/> 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ReactPopUp />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        <input
+          onClick={[Function]}
+          style={
+            Object {
+              "zIndex": -1,
+            }
+          }
+          type="button"
+          value="show"
+        />,
+      ],
+      "className": "react-popup",
+      "style": Object {
         "zIndex": -1,
-      }
-    }
-    type="button"
-    value="show"
-  />
-</div>
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onClick": [Function],
+          "style": Object {
+            "zIndex": -1,
+          },
+          "type": "button",
+          "value": "show",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <input
+            onClick={[Function]}
+            style={
+              Object {
+                "zIndex": -1,
+              }
+            }
+            type="button"
+            value="show"
+          />,
+        ],
+        "className": "react-popup",
+        "style": Object {
+          "zIndex": -1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onClick": [Function],
+            "style": Object {
+              "zIndex": -1,
+            },
+            "type": "button",
+            "value": "show",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;
 
-exports[`React Popup should render 1`] = `
-<div
-  className="react-popup"
-  style={
-    Object {
-      "zIndex": -1,
-    }
-  }
->
-  <input
-    onClick={[Function]}
-    style={
-      Object {
+exports[`React Popup should display when button is clicked and hide when overlay is clicked 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ReactPopUp />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        <input
+          onClick={[Function]}
+          style={
+            Object {
+              "zIndex": -1,
+            }
+          }
+          type="button"
+          value="show"
+        />,
+      ],
+      "className": "react-popup",
+      "style": Object {
         "zIndex": -1,
-      }
-    }
-    type="button"
-    value="show"
-  />
-</div>
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onClick": [Function],
+          "style": Object {
+            "zIndex": -1,
+          },
+          "type": "button",
+          "value": "show",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <input
+            onClick={[Function]}
+            style={
+              Object {
+                "zIndex": -1,
+              }
+            }
+            type="button"
+            value="show"
+          />,
+        ],
+        "className": "react-popup",
+        "style": Object {
+          "zIndex": -1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onClick": [Function],
+            "style": Object {
+              "zIndex": -1,
+            },
+            "type": "button",
+            "value": "show",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`React Popup should display when button is clicked and hide when overlay is clicked 2`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ReactPopUp />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="popup-display"
+        >
+          <div
+            className="popup-overlay"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,0.4)",
+                "height": "100%",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 1,
+              }
+            }
+          />
+          <div
+            className="popup"
+            style={
+              Object {
+                "backgroundColor": "white",
+                "boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+                "height": "650px",
+                "position": "absolute",
+                "width": "450px",
+                "zIndex": 2,
+              }
+            }
+          />
+        </div>,
+        <input
+          onClick={[Function]}
+          style={
+            Object {
+              "zIndex": -1,
+            }
+          }
+          type="button"
+          value="show"
+        />,
+      ],
+      "className": "react-popup",
+      "style": Object {
+        "zIndex": -1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="popup-overlay"
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0.4)",
+                  "height": "100%",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            />,
+            <div
+              className="popup"
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+                  "height": "650px",
+                  "position": "absolute",
+                  "width": "450px",
+                  "zIndex": 2,
+                }
+              }
+            />,
+          ],
+          "className": "popup-display",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "popup-overlay",
+              "onClick": [Function],
+              "style": Object {
+                "backgroundColor": "rgba(0,0,0,0.4)",
+                "height": "100%",
+                "position": "absolute",
+                "width": "100%",
+                "zIndex": 1,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "popup",
+              "style": Object {
+                "backgroundColor": "white",
+                "boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+                "height": "650px",
+                "position": "absolute",
+                "width": "450px",
+                "zIndex": 2,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onClick": [Function],
+          "style": Object {
+            "zIndex": -1,
+          },
+          "type": "button",
+          "value": "show",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="popup-display"
+          >
+            <div
+              className="popup-overlay"
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0.4)",
+                  "height": "100%",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            />
+            <div
+              className="popup"
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+                  "height": "650px",
+                  "position": "absolute",
+                  "width": "450px",
+                  "zIndex": 2,
+                }
+              }
+            />
+          </div>,
+          <input
+            onClick={[Function]}
+            style={
+              Object {
+                "zIndex": -1,
+              }
+            }
+            type="button"
+            value="show"
+          />,
+        ],
+        "className": "react-popup",
+        "style": Object {
+          "zIndex": -1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="popup-overlay"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "rgba(0,0,0,0.4)",
+                    "height": "100%",
+                    "position": "absolute",
+                    "width": "100%",
+                    "zIndex": 1,
+                  }
+                }
+              />,
+              <div
+                className="popup"
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+                    "height": "650px",
+                    "position": "absolute",
+                    "width": "450px",
+                    "zIndex": 2,
+                  }
+                }
+              />,
+            ],
+            "className": "popup-display",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "popup-overlay",
+                "onClick": [Function],
+                "style": Object {
+                  "backgroundColor": "rgba(0,0,0,0.4)",
+                  "height": "100%",
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "popup",
+                "style": Object {
+                  "backgroundColor": "white",
+                  "boxShadow": "0 0 10px 0 rgba(0, 0, 0, 0.5)",
+                  "height": "650px",
+                  "position": "absolute",
+                  "width": "450px",
+                  "zIndex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onClick": [Function],
+            "style": Object {
+              "zIndex": -1,
+            },
+            "type": "button",
+            "value": "show",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`React Popup should display when button is clicked and hide when overlay is clicked 3`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ReactPopUp />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        <input
+          onClick={[Function]}
+          style={
+            Object {
+              "zIndex": -1,
+            }
+          }
+          type="button"
+          value="show"
+        />,
+      ],
+      "className": "react-popup",
+      "style": Object {
+        "zIndex": -1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "onClick": [Function],
+          "style": Object {
+            "zIndex": -1,
+          },
+          "type": "button",
+          "value": "show",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <input
+            onClick={[Function]}
+            style={
+              Object {
+                "zIndex": -1,
+              }
+            }
+            type="button"
+            value="show"
+          />,
+        ],
+        "className": "react-popup",
+        "style": Object {
+          "zIndex": -1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "onClick": [Function],
+            "style": Object {
+              "zIndex": -1,
+            },
+            "type": "button",
+            "value": "show",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;
