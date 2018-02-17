@@ -75,46 +75,51 @@ describe('React Popup Styling', () => {
 });
 
 describe('React Popup Callbacks', () => {
+  let cbTest;
+
+  beforeEach(() => {
+    cbTest = stub();
+  })
+
   it('should execute onPop callback when popup appears', () => {
-    const popTest = stub();
     const component = shallow(
-      <ReactPopup onPop={popTest}>
+      <ReactPopup onPop={cbTest}>
         Aw come on! You're still down here?
       </ReactPopup>
     )
-    expect(popTest.callCount).toEqual(0);
+    expect(cbTest.callCount).toEqual(0);
     component.find('input').simulate('click');
-    expect(popTest.callCount).toEqual(1);
-    component.find('input').simulate('click');
-    component.find('input').simulate('click');
-    expect(popTest.callCount).toEqual(2);
+    expect(cbTest.callCount).toEqual(1);
     component.find('input').simulate('click');
     component.find('input').simulate('click');
-    expect(popTest.callCount).toEqual(3);
+    expect(cbTest.callCount).toEqual(2);
+    component.find('input').simulate('click');
+    component.find('input').simulate('click');
+    expect(cbTest.callCount).toEqual(3);
   });
 
   it('should execute onUnpop callback when popup disappears', () => {
-    const unpopTest = stub();
     const component = shallow(
-      <ReactPopup onUnpop={unpopTest}>
+      <ReactPopup onUnpop={cbTest}>
         This is not the easter egg you're looking for...
       </ReactPopup>
     )
-    expect(unpopTest.callCount).toEqual(0);
+    expect(cbTest.callCount).toEqual(0);
     component.find('input').simulate('click');
     component.find('input').simulate('click');
-    expect(unpopTest.callCount).toEqual(1);
+    expect(cbTest.callCount).toEqual(1);
     component.find('input').simulate('click');
     component.find('input').simulate('click');
-    expect(unpopTest.callCount).toEqual(2);
+    expect(cbTest.callCount).toEqual(2);
     component.find('input').simulate('click');
     component.find('input').simulate('click');
-    expect(unpopTest.callCount).toEqual(3);
+    expect(cbTest.callCount).toEqual(3);
   });
 });
 
 describe('React Popup PropTypes', () => {
   let warning;
+
   beforeEach(() => {
     warning = stub(console, 'error');
   })
