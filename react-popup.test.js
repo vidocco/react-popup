@@ -97,7 +97,7 @@ describe('React Popup Callbacks', () => {
     const unpopTest = stub();
     const component = shallow(
       <ReactPopup onUnpop={unpopTest}>
-        Aw come on! You're still down here?
+        This is not the easter egg you're looking for...
       </ReactPopup>
     )
     expect(unpopTest.callCount).toEqual(0);
@@ -114,5 +114,56 @@ describe('React Popup Callbacks', () => {
 });
 
 describe('React Popup PropTypes', () => {
+  let warning;
+  beforeEach(() => {
+    warning = stub(console, 'error');
+  })
+
+  afterEach(() => {
+    console.error.restore();
+  })
+
+  it('should throw a console.warning if wrong type is passed to onPop', () => {
+    shallow (
+      <ReactPopup onPop="Somebody"/>
+    )
+    expect(warning.callCount).toEqual(1);
+  });
+
+  it('should throw a console.warning if wrong type is passed to onUnpop', () => {
+    shallow (
+      <ReactPopup onUnpop="once"/>
+    )
+    expect(warning.callCount).toEqual(1);
+  });
+
+  it('should throw a console.warning if wrong type is passed to overlay', () => {
+    shallow (
+      <ReactPopup overlay="told me"/>
+    )
+    expect(warning.callCount).toEqual(1);
+  });
+
+  it('should throw a console.warning if wrong type is passed to popup', () => {
+    shallow (
+      <ReactPopup popup="the world"/>
+    )
+    expect(warning.callCount).toEqual(1);
+  });
+
+  it('should throw a console.warning if wrong type is passed to button', () => {
+    shallow (
+      <ReactPopup button="is gonna"/>
+    )
+    expect(warning.callCount).toEqual(1);
+  });
+
+  it('should throw a console.warning if wrong type is passed to buttonText', () => {
+    let rollMe = 4;
+    shallow (
+      <ReactPopup buttonText={rollMe}/>
+    )
+    expect(warning.callCount).toEqual(1);
+  });
 
 });
