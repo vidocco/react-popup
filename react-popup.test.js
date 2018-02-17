@@ -27,4 +27,6 @@ describe('React Popup', () => {
     expect(component.find('.popup-display').exists()).toBe(false);
     expect(component).toMatchSnapshot();
   });
+
+  it('')
 });
