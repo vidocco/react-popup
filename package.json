@@ -24,7 +24,7 @@
     "url": "https://github.com/vidocco/react-popup/issues"
   },
   "homepage": "https://github.com/vidocco/react-popup#readme",
-  "author": "Jack Thibaut",
+  "author": "vidocco",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.2.0"

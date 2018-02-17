@@ -1,3 +1,16 @@
 language: node_js
 node_js:
   - "stable"
+install:
+  - npm install
+script:
+  - npm test
+before_deploy:
+  - npm run build
+  - npm pack
+deploy:
+  provider: npm
+  email: process.env.NPM_EMAIL_ADDRESS
+  api_key: process.env.NPM_AUTH_TOKEN
+  on:
+    branch: master
