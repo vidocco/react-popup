@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "update-snapshots": "jest -u",
-    "build": "webpack"
+    "build": "webpack --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
