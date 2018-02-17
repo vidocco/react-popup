@@ -5,6 +5,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import { shallow } from 'enzyme';
+import { stub } from 'sinon';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -55,7 +56,7 @@ describe('React Popup Styling', () => {
   it('should modify overlay styling if passed as props correctly', () => {
     const component = shallow(
       <ReactPopup overlay={{backgroundColor: 'green'}}>
-        If you're reading this you've gone down the rabbit hole.
+        Seriously stop.
       </ReactPopup>
     )
     component.find('input').simulate('click');
@@ -65,7 +66,7 @@ describe('React Popup Styling', () => {
   it('should modify popup styling if passed as props correctly', () => {
     const component = shallow(
       <ReactPopup popup={{backgroundColor: 'green'}}>
-        If you're reading this you've gone down the rabbit hole.
+        These are just tests dude, I'm sure you have better stuff to do.
       </ReactPopup>
     )
     component.find('input').simulate('click');
@@ -74,7 +75,42 @@ describe('React Popup Styling', () => {
 });
 
 describe('React Popup Callbacks', () => {
+  it('should execute onPop callback when popup appears', () => {
+    const popTest = stub();
+    const component = shallow(
+      <ReactPopup onPop={popTest}>
+        Aw come on! You're still down here?
+      </ReactPopup>
+    )
+    expect(popTest.callCount).toEqual(0);
+    component.find('input').simulate('click');
+    expect(popTest.callCount).toEqual(1);
+    component.find('input').simulate('click');
+    component.find('input').simulate('click');
+    expect(popTest.callCount).toEqual(2);
+    component.find('input').simulate('click');
+    component.find('input').simulate('click');
+    expect(popTest.callCount).toEqual(3);
+  });
 
+  it('should execute onUnpop callback when popup disappears', () => {
+    const unpopTest = stub();
+    const component = shallow(
+      <ReactPopup onUnpop={unpopTest}>
+        Aw come on! You're still down here?
+      </ReactPopup>
+    )
+    expect(unpopTest.callCount).toEqual(0);
+    component.find('input').simulate('click');
+    component.find('input').simulate('click');
+    expect(unpopTest.callCount).toEqual(1);
+    component.find('input').simulate('click');
+    component.find('input').simulate('click');
+    expect(unpopTest.callCount).toEqual(2);
+    component.find('input').simulate('click');
+    component.find('input').simulate('click');
+    expect(unpopTest.callCount).toEqual(3);
+  });
 });
 
 describe('React Popup PropTypes', () => {
