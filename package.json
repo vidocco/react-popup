@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "update-snapshots": "jest -u",
-    "build": "webpack"
+    "build": "webpack ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
+    "fs": "0.0.1-security",
     "jest": "^22.1.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
