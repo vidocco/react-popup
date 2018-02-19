@@ -5,8 +5,6 @@ module.exports = {
     left: 0,
     width: '100%',
     height: '100%',
-    display: '-webkit-box',
-    display: '-ms-flexbox',
     display: 'flex',
     '-webkit-box-pack': 'center',
     '-ms-flex-pack': 'center',
