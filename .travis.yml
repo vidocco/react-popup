@@ -6,6 +6,7 @@ install:
 script:
   - npm test
 before_deploy:
+  - npm run build
   - npm pack
 deploy:
   provider: npm
