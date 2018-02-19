@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPopup from './dist/index';
+import ReactPopup from '../src/react-popup';
 
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
