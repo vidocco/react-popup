@@ -9,9 +9,9 @@
   "description": "a self-contained, simple and customizable popup component for react",
   "main": "./dist/index.js",
   "scripts": {
+    "build": "webpack --config ./webpack.config.js",
     "test": "jest ./__tests__/react-popup.test.js",
-    "update-snapshots": "jest -u",
-    "build": "webpack --config ./webpack.config.js"
+    "update-snapshots": "jest -u"
   },
   "repository": {
     "type": "git",

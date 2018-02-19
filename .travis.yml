@@ -8,7 +8,7 @@ script:
 before_deploy:
   - npm run build
   - git add ./dist
-  - git commit -m $TRAVIS_COMMIT
+  - git commit -m 'travis testing'
   - npm pack
 deploy:
   provider: npm
