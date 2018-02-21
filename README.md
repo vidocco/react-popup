@@ -1,8 +1,11 @@
+[![npm version](https://badge.fury.io/js/react-base-popup.svg)](https://badge.fury.io/js/react-base-popup)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/vidocco/react-popup)
 [![Build Status](https://travis-ci.org/vidocco/react-popup.svg?branch=master)](https://travis-ci.org/vidocco/react-popup)
-[![Inline docs](http://inch-ci.org/github/vidocco/react-popup.svg?branch=master)](http://inch-ci.org/github/vidocco/react-popup)
-[![NSP Status](https://nodesecurity.io/orgs/react-base-popup/projects/e08d46d5-0f44-4c15-9e32-4ad94d2b270c/badge)](https://nodesecurity.io/orgs/react-base-popup/projects/e08d46d5-0f44-4c15-9e32-4ad94d2b270c)
 [![codecov](https://codecov.io/gh/vidocco/react-popup/branch/master/graph/badge.svg)](https://codecov.io/gh/vidocco/react-popup)
 [![Maintainability](https://api.codeclimate.com/v1/badges/765751f97027fed7b3bf/maintainability)](https://codeclimate.com/github/vidocco/react-popup/maintainability)
+[![NSP Status](https://nodesecurity.io/orgs/react-base-popup/projects/e08d46d5-0f44-4c15-9e32-4ad94d2b270c/badge)](https://nodesecurity.io/orgs/react-base-popup/projects/e08d46d5-0f44-4c15-9e32-4ad94d2b270c)
+[![Inline docs](http://inch-ci.org/github/vidocco/react-popup.svg?branch=master)](http://inch-ci.org/github/vidocco/react-popup)
+
 
 # react-base-popup
 
