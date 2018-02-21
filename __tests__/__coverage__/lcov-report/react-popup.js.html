@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>33/33</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/9</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
   </div>
@@ -149,7 +149,25 @@
 104
 105
 106
-107</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -209,6 +227,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">210x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -232,21 +283,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -310,25 +346,58 @@ export default class ReactPopUp extends React.Component {
     });
   }
 &nbsp;
-  render() {
-    /**
-     * Mapping the passed styles (if they have been defined in their corresponding
-     * props) and/or setting the styles to their default values (if they don't).
-     */
+  /**
+   * Conditionally displays the popup if the state is set to popped.
+   * @param { object } styles an object with the styles for overlay and popup.
+   * @returns { node | bool } popup JSX or false.
+   */
+  renderPopUp = (styles) =&gt; {
+    return this.state.popped &amp;&amp; (
+      &lt;div className="popup-display"&gt;
+        &lt;div
+          style={styles.overlay}
+          onClick={this.pop}
+          className="popup-overlay"
+        &gt;
+        &lt;/div&gt;
+        &lt;div className="popup" style={styles.popup}&gt;
+          {this.props.children}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+&nbsp;
+  /**
+   * checks for the existance of an object, if it does exist and has a value it
+   * returns said value; else, it returns a default value.
+   * @param { object } obj style object to check.
+   * @param { string } prop property of said object to check.
+   * @param { string } def default value of said property (in case it's null).
+   * @returns { string } value for said prop or default value.
+   */
+  renderStyles = (obj, prop, def) =&gt; {
+    return (obj &amp;&amp; obj[prop]) || def
+  }
+&nbsp;
+  /**
+   * Mapping the passed styles (if they have been defined in their corresponding
+   * props) and/or setting the styles to their default values (if they don't).
+   */
+  render () {
     const styles = {
       overlay: {
-        width: `${ (this.props.overlay &amp;&amp; this.props.overlay.width) || '100%'}`,
-        height: `${ (this.props.overlay &amp;&amp; this.props.overlay.height) || '100%' }`,
-        backgroundColor: `${ (this.props.overlay &amp;&amp; this.props.overlay.backgroundColor) || 'rgba(0,0,0,0.4)' }`,
+        width: `${ this.renderStyles(this.props.overlay, 'width', '100%') }`,
+        height: `${ this.renderStyles(this.props.overlay, 'height', '100%') }`,
+        backgroundColor: `${ this.renderStyles(this.props.overlay, 'backgroundColor', 'rgba(0,0,0,0.4)') }`,
         position: 'absolute',
         zIndex: 1,
         ...this.props.overlay,
       },
       popup: {
-        width: `${ (this.props.popup &amp;&amp; this.props.popup.width) || '450px'}`,
-        height: `${ (this.props.popup &amp;&amp; this.props.popup.height) || '650px' }`,
-        backgroundColor: `${ (this.props.popup &amp;&amp; this.props.popup.backgroundColor) || 'white' }`,
-        boxShadow: `${ (this.props.popup &amp;&amp; this.props.popup.boxShadow) || '0 0 10px 0 rgba(0, 0, 0, 0.5)' }`,
+        width: `${ this.renderStyles(this.props.popup, 'width', '450px')}`,
+        height: `${ this.renderStyles(this.props.popup, 'height', '650px') }`,
+        backgroundColor: `${ this.renderStyles(this.props.popup, 'backgroundColor', 'white') }`,
+        boxShadow: `${ this.renderStyles(this.props.popup, 'boxShadow', '0 0 10px 0 rgba(0, 0, 0, 0.5)') }`,
         position: 'absolute',
         zIndex: 2,
         ...this.props.popup,
@@ -339,22 +408,7 @@ export default class ReactPopUp extends React.Component {
     };
     return (
       &lt;div className="react-popup" style={{ zIndex: -1 }}&gt;
-        {this.state.popped
-          ? (
-            &lt;div className="popup-display"&gt;
-              &lt;div
-                style={styles.overlay}
-                onClick={this.pop}
-                className="popup-overlay"
-              &gt;
-              &lt;/div&gt;
-              &lt;div className="popup" style={styles.popup}&gt;
-                {this.props.children}
-              &lt;/div&gt;
-            &lt;/div&gt;
-          ) : (
-            null
-          )}
+        {this.renderPopUp(styles)}
         &lt;input style={{zIndex: -1, ...styles.button}} type="button" onClick={this.pop} value={this.props.buttonText || 'show'} /&gt;
       &lt;/div&gt;
     );
@@ -367,7 +421,7 @@ ReactPopUp.propTypes = propTypes;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 21 2018 23:25:33 GMT+0100 (CET)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 22 2018 00:13:17 GMT+0100 (CET)
 </div>
 </div>
 <script src="prettify.js"></script>

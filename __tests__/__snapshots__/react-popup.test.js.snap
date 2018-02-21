@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        null,
+        false,
         <input
           onClick={[Function]}
           style={
@@ -37,7 +37,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      null,
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -64,7 +64,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          null,
+          false,
           <input
             onClick={[Function]}
             style={
@@ -83,7 +83,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        null,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -132,7 +132,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        null,
+        false,
         <input
           onClick={[Function]}
           style={
@@ -151,7 +151,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      null,
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -178,7 +178,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          null,
+          false,
           <input
             onClick={[Function]}
             style={
@@ -197,7 +197,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        null,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -574,7 +574,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        null,
+        false,
         <input
           onClick={[Function]}
           style={
@@ -593,7 +593,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      null,
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -620,7 +620,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          null,
+          false,
           <input
             onClick={[Function]}
             style={
@@ -639,7 +639,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        null,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -694,7 +694,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        null,
+        false,
         <input
           onClick={[Function]}
           style={
@@ -713,7 +713,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      null,
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -740,7 +740,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          null,
+          false,
           <input
             onClick={[Function]}
             style={
@@ -759,7 +759,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        null,
+        false,
         Object {
           "instance": null,
           "key": undefined,
