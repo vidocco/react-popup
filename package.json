@@ -4,7 +4,7 @@
     "collectCoverage": true
   },
   "name": "react-base-popup",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "a self-contained, simple and customizable popup component for react",
   "main": "./dist/index.js",
   "scripts": {
