@@ -16,7 +16,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader', // babel-loader doesn't require presets on webpack when babelrc is defined.
         },
       },
       {
@@ -31,13 +31,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new UglifyJsPlugin({
+    new UglifyJsPlugin({ // adding UglifyJsPlugin for webpack to improve performance.
       test: /\.js($|\?)/i,
       sourceMap: true,
       uglifyOptions: {
         mangle: {
           reserved: [
-            'ReactPopUp',
+            'ReactPopUp', // Reserving ReactPopUp and props to make PropTypes warnings clearer.
             'props',
           ],
         },

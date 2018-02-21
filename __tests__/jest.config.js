@@ -5,8 +5,8 @@ module.exports = {
   coverageDirectory: './__tests__/__coverage__',
   coveragePathIgnorePatterns: ['dist/', 'node_modules/', '__mocks__/'],
   coverageReporters: ['text-summary','text','json','lcov'],
-  rootDir: '..',
+  rootDir: '..', // correctly set up the rootDir.
   moduleNameMapper: {
-    '\\.(css|less)$': '../__mocks__/styleMock.js',
+    '\\.(css)$': '../__mocks__/styleMock.js', // setting mocks directory for styles.
   },
 }

@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/vidocco/react-popup.svg?branch=master)](https://travis-ci.org/vidocco/react-popup)
+[![Inline docs](http://inch-ci.org/github/vidocco/react-popup.svg?branch=master)](http://inch-ci.org/github/vidocco/react-popup)
 
 # react-base-popup
 
@@ -65,6 +66,14 @@ class MyComponent extends React.Component {
 ```
 
 Refer to the [React documentation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) for more information.
+
+## Future Features
+
+- Make the button optional.
+- Add prop to set a condition for displaying popup.
+- Add functions for before popping and before disappearing.
+- Add support for css modules.
+- Add support for icons on button.
 
 ## Sending Feedback
 

@@ -1,3 +1,4 @@
+// required file for mocking styling on jest (since we are testing customization of styles too).
 module.exports = {
   'popup-display': {
     position: 'absolute',
