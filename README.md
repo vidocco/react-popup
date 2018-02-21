@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/vidocco/react-popup.svg?branch=master)](https://travis-ci.org/vidocco/react-popup)
 [![Inline docs](http://inch-ci.org/github/vidocco/react-popup.svg?branch=master)](http://inch-ci.org/github/vidocco/react-popup)
+[![NSP Status](https://nodesecurity.io/orgs/react-base-popup/projects/e08d46d5-0f44-4c15-9e32-4ad94d2b270c/badge)](https://nodesecurity.io/orgs/react-base-popup/projects/e08d46d5-0f44-4c15-9e32-4ad94d2b270c)
 
 # react-base-popup
 
