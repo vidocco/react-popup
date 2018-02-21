@@ -1,16 +1,11 @@
 {
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less)$": "../__mocks__/styleMock.js"
-    }
-  },
   "name": "react-base-popup",
   "version": "1.0.4",
   "description": "a self-contained, simple and customizable popup component for react",
   "main": "./dist/index.js",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
-    "test": "jest ./__tests__/react-popup.test.js",
+    "test": "jest ./__tests__/react-popup.test.js --config ./__tests__/jest.config.js",
     "update-snapshots": "jest -u"
   },
   "repository": {
