@@ -1,4 +1,8 @@
 {
+  "jest": {
+    "coverageDirectory": "./__tests__/__coverage__/",
+    "collectCoverage": true
+  },
   "name": "react-base-popup",
   "version": "1.0.6",
   "description": "a self-contained, simple and customizable popup component for react",
