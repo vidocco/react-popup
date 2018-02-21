@@ -44,10 +44,10 @@ class MyComponent extends React.Component {
       onPop={() => console.log('Hello!')}
       onUnpop={() => console.log('Goodbye!')}>
     </PopUp>
-    
+
     /**
      * All three components of react-base-popup are fully customizable with the standard
-     * react styles. Read more about the available styles and names here: 
+     * react styles. Read more about the available styles and names here:
      * https://reactjs.org/docs/dom-elements.html#style
      */
     <PopUp
