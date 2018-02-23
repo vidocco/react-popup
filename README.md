@@ -57,15 +57,38 @@ class MyComponent extends React.Component {
      */
     <PopUp
       overlay={{backgroundColor: 'green'}}
-      popup={{border-radius: '50px'}}
+      popup={{borderRadius: '50px'}}
       button={{width: '1000px', height: '1000px'}}>
+    </PopUp>
+
+    /**
+     * Pass text to the buttonText prop to set the text of the button.
+     */
+    <PopUp
+      buttonText="Click Me!">
+    </PopUp>
+
+    /**
+     * Set the disable prop to true if you want not to display the button. This means that
+     * you will need to use the pop prop to control the popup status (if set to true, it
+     * will render the modal; if set to false it will hide it). You will need an external
+     * function to make the modal work this way, something that can toggle the prop
+     * status.
+     */
+    componentWillReceiveProps () {
+      this.setState({togglePopUp: !this.state.togglePopUp});
+    }
+
+    <PopUp
+      disable={true}
+      pop={this.state.togglePopUp}>
     </PopUp>
 
     /**
      * If any of the props passed to react-base-popup are invalid, there will be a warning
      * in the console displaying the correct type expected for that specific prop.
      */
-	<PopUp overlay={() => console.log('hello!')}> //will display a warning
+    <PopUp overlay={() => console.log('hello!')}> //will display a warning
     </PopUp>
   }
 }
