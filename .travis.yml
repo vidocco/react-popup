@@ -10,7 +10,6 @@ before_deploy:
   - npm run build
   - git add .
   - git commit -m 'travis testing'
-  - npm pack
 deploy:
   provider: npm
   email: $NPM_EMAIL_ADDRESS

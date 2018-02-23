@@ -41,6 +41,13 @@ export default class ReactPopUp extends React.Component {
     }
   }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.pop) this.setState({popped: true}, () => this.props.onPop && this.props.onPop());
+    else if (this.props.pop === false) this.setState({popped: false}, () => this.props.onUnpop && this.props.onUnpop())
+  }
+
+  handleOverlayClick = () => this.props.pop || this.pop();
+
   /**
    * Function that controls the state of the modal, switching its state between
    * popped and hidden, and executes the onPop and onUnpop functions (if either of
@@ -59,11 +66,11 @@ export default class ReactPopUp extends React.Component {
    * @returns { node | bool } popup JSX or false.
    */
   renderPopUp = (styles) => {
-    return this.state.popped && (
+    return (this.props.pop || this.state.popped) && (
       <div className="popup-display">
         <div
           style={styles.overlay}
-          onClick={this.pop}
+          onClick={this.handleOverlayClick}
           className="popup-overlay"
         >
         </div>
@@ -116,7 +123,7 @@ export default class ReactPopUp extends React.Component {
     return (
       <div className="react-popup" style={{ zIndex: -1 }}>
         {this.renderPopUp(styles)}
-        <input style={{zIndex: -1, ...styles.button}} type="button" onClick={this.pop} value={this.props.buttonText || 'show'} />
+        {(this.props.disable || <input style={{zIndex: -1, ...styles.button}} type="button" onClick={this.pop} value={this.props.buttonText || 'show'} />)}
       </div>
     );
   }
