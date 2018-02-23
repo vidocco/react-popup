@@ -10,13 +10,15 @@ import './react-popup.css';
  */
 
 const propTypes = {
-  onPop: PropTypes.func,
-  onUnpop: PropTypes.func,
   overlay: PropTypes.object,
   popup: PropTypes.object,
   button: PropTypes.object,
-  children: PropTypes.node,
+  onPop: PropTypes.func,
+  onUnpop: PropTypes.func,
+  pop: PropTypes.bool,
+  disable: PropTypes.bool,
   buttonText: PropTypes.string,
+  children: PropTypes.node,
 }
 
 /**
@@ -24,11 +26,13 @@ const propTypes = {
  * modal/popup on top of the contents of the current page. The modal will disappear when
  * clicking on the outside of the modal.
  *
- * @prop { function } onPop function to be executed when the modal appears.
- * @prop { function } onUnpop function to be executed when the modal disappears.
  * @prop { object } overlay react styles object containing styles for the background overlay.
  * @prop { object } popup react styles object containing styles for the modal.
  * @prop { object } button react styles object containing styles for the button.
+ * @prop { function } onPop function to be executed when the modal appears.
+ * @prop { function } onUnpop function to be executed when the modal disappears.
+ * @prop { boolean } pop if set to true, will render the popup.
+ * @prop { boolean } disable if set to true, will not render the button.
  * @prop { string } buttonText text to be displayed in the button.
  * @prop { node } children contents of the modal.
  */
@@ -42,11 +46,26 @@ export default class ReactPopUp extends React.Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.pop) this.setState({popped: true}, () => this.props.onPop && this.props.onPop());
-    else if (this.props.pop === false) this.setState({popped: false}, () => this.props.onUnpop && this.props.onUnpop())
+    if (nextProps.pop || nextProps.pop === false) {
+      this.setState({popped: !!nextProps.pop}, this.handleCallbacks);
+    }
   }
 
+  /**
+   * Function that takes care of not calling this.pop if the this.props.pop is set
+   * to true (and therefore has been specified specified).
+   */
   handleOverlayClick = () => this.props.pop || this.pop();
+
+  /**
+   * Function that takes care of correctly calling the appropriate callback based
+   * on what is the current status of this.state.popped. Is always used within the
+   * callback of this.setState.
+   */
+  handleCallbacks = () => {
+    if (this.state.popped && this.props.onPop) this.props.onPop();
+    else if (!this.state.popped && this.props.onUnpop) this.props.onUnpop();
+  }
 
   /**
    * Function that controls the state of the modal, switching its state between
@@ -54,10 +73,7 @@ export default class ReactPopUp extends React.Component {
    * them exist).
    */
   pop = () => {
-    this.setState({popped: !this.state.popped}, () => {
-      if (this.state.popped && this.props.onPop) this.props.onPop();
-      else if (!this.state.popped && this.props.onUnpop) this.props.onUnpop();
-    });
+    this.setState({popped: !this.state.popped}, this.handleCallbacks);
   }
 
   /**
