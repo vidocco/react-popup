@@ -12,7 +12,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('React Popup DOM', () => {
   it('should appear in DOM as <input type="button"/>', () => {
     const component = shallow(<ReactPopup/>)
-    expect(component).toMatchSnapshot();
+    expect(component.html()).toMatchSnapshot();
     expect(component.find('.popup-display').exists()).toBe(false);
     expect(component.find('input').exists()).toBe(true);
   });
@@ -20,13 +20,13 @@ describe('React Popup DOM', () => {
   it('should display when button is clicked and hide when overlay is clicked', () => {
     const component = shallow(<ReactPopup/>);
     expect(component.find('.popup-display').exists()).toBe(false);
-    expect(component).toMatchSnapshot();
+    expect(component.html()).toMatchSnapshot();
     component.find('input').simulate('click');
     expect(component.find('.popup-display').exists()).toBe(true);
-    expect(component).toMatchSnapshot();
+    expect(component.html()).toMatchSnapshot();
     component.find('.popup-overlay').simulate('click');
     expect(component.find('.popup-display').exists()).toBe(false);
-    expect(component).toMatchSnapshot();
+    expect(component.html()).toMatchSnapshot();
   });
 
   it('should render any children passed on popup', () => {
@@ -36,10 +36,10 @@ describe('React Popup DOM', () => {
       </ReactPopup>
     );
     expect(component.find('#test-text').exists()).toBe(false);
-    expect(component).toMatchSnapshot();
+    expect(component.html()).toMatchSnapshot();
     component.find('input').simulate('click');
     expect(component.find('#test-text').exists()).toBe(true);
-    expect(component).toMatchSnapshot();
+    expect(component.html()).toMatchSnapshot();
   })
 });
 
