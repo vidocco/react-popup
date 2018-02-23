@@ -41,13 +41,13 @@ export default class ReactPopUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      popped: false,
+      popped: !!props.pop,
     }
   }
 
   componentWillReceiveProps (nextProps) {
-    if (nextProps.pop || nextProps.pop === false) {
-      this.setState({popped: !!nextProps.pop}, this.handleCallbacks);
+    if (nextProps.pop === true || (nextProps.pop === false && typeof nextProps.pop !== undefined)) {
+      this.setState({popped: nextProps.pop}, this.handleCallbacks);
     }
   }
 
@@ -82,7 +82,7 @@ export default class ReactPopUp extends React.Component {
    * @returns { node | bool } popup JSX or false.
    */
   renderPopUp = (styles) => {
-    return (this.props.pop || this.state.popped) && (
+    return this.state.popped && (
       <div className="popup-display">
         <div
           style={styles.overlay}

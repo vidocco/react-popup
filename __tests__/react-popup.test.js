@@ -41,6 +41,41 @@ describe('React Popup DOM', () => {
     expect(component.find('#test-text').exists()).toBe(true);
     expect(component.html()).toMatchSnapshot();
   })
+
+  it('should not render the button if the disabled prop is set to true', () => {
+    const component = shallow(
+      <ReactPopup disable={true}>
+      </ReactPopup>
+    );
+    expect(component.find('input').exists()).toBe(false);
+    expect(component.html()).toMatchSnapshot();
+  })
+
+  it('should render/hide the popup if the pop prop is set to true/false', () => {
+    const component = shallow(
+      <ReactPopup pop={true}>
+      </ReactPopup>
+    );
+    expect(component.find('.popup-display').exists()).toBe(true);
+    expect(component.html()).toMatchSnapshot();
+    component.setProps({pop: false});
+    expect(component.find('.popup-display').exists()).toBe(false);
+    expect(component.html()).toMatchSnapshot();
+    component.setProps({pop: true});
+    expect(component.find('.popup-display').exists()).toBe(true);
+    expect(component.html()).toMatchSnapshot();
+  })
+
+  it('not setting pop or setting it to undefined, should not execute the callback', () => {
+    const component = shallow(
+      <ReactPopup pop={true}>
+      </ReactPopup>
+    )
+    expect(component.find('.popup-display').exists()).toBe(true);
+    component.setProps({pop: undefined});
+    expect(component.find('.popup-display').exists()).toBe(true);
+    expect(component.html()).toMatchSnapshot();
+  })
 });
 
 describe('React Popup Styling', () => {

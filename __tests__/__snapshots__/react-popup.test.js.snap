@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`React Popup DOM not setting pop or setting it to undefined, should not execute the callback 1`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><div class=\\"popup-display\\"><div style=\\"width:100%;height:100%;background-color:rgba(0,0,0,0.4);position:absolute;z-index:1\\" class=\\"popup-overlay\\"></div><div class=\\"popup\\" style=\\"width:450px;height:650px;background-color:white;box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.5);position:absolute;z-index:2\\"></div></div><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
+
 exports[`React Popup DOM should appear in DOM as <input type="button"/> 1`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
 
 exports[`React Popup DOM should display when button is clicked and hide when overlay is clicked 1`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
@@ -8,6 +10,14 @@ exports[`React Popup DOM should display when button is clicked and hide when ove
 
 exports[`React Popup DOM should display when button is clicked and hide when overlay is clicked 3`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
 
+exports[`React Popup DOM should not render the button if the disabled prop is set to true 1`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"></div>"`;
+
 exports[`React Popup DOM should render any children passed on popup 1`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
 
 exports[`React Popup DOM should render any children passed on popup 2`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><div class=\\"popup-display\\"><div style=\\"width:100%;height:100%;background-color:rgba(0,0,0,0.4);position:absolute;z-index:1\\" class=\\"popup-overlay\\"></div><div class=\\"popup\\" style=\\"width:450px;height:650px;background-color:white;box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.5);position:absolute;z-index:2\\"><p id=\\"test-text\\">Hello World!</p></div></div><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
+
+exports[`React Popup DOM should render/hide the popup if the pop prop is set to true/false 1`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><div class=\\"popup-display\\"><div style=\\"width:100%;height:100%;background-color:rgba(0,0,0,0.4);position:absolute;z-index:1\\" class=\\"popup-overlay\\"></div><div class=\\"popup\\" style=\\"width:450px;height:650px;background-color:white;box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.5);position:absolute;z-index:2\\"></div></div><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
+
+exports[`React Popup DOM should render/hide the popup if the pop prop is set to true/false 2`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
+
+exports[`React Popup DOM should render/hide the popup if the pop prop is set to true/false 3`] = `"<div class=\\"react-popup\\" style=\\"z-index:-1\\"><div class=\\"popup-display\\"><div style=\\"width:100%;height:100%;background-color:rgba(0,0,0,0.4);position:absolute;z-index:1\\" class=\\"popup-overlay\\"></div><div class=\\"popup\\" style=\\"width:450px;height:650px;background-color:white;box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.5);position:absolute;z-index:2\\"></div></div><input type=\\"button\\" style=\\"z-index:-1\\" value=\\"show\\"/></div>"`;
